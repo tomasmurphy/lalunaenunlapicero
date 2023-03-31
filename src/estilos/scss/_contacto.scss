@@ -1,0 +1,114 @@
+#contacto{
+    background-image: url('../../../public/la_libreta_de_las_tapas_negras/2.jpg');
+    height: 100vh;
+    height: 100%;
+    background-attachment: scroll;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+        @include desktop{
+          background-position: 0 0;
+        }
+        
+        .transparencia {
+          padding-top: 0;
+          width: 100vw;
+          height: calc(100vh - 7rem);
+          background: $detalle4;
+          z-index: 8000;
+          display: flex;
+          @include desktop {
+            
+            padding-top: 0;
+            height: calc(100vh - 3.5rem);
+                }
+        }
+        .orden{
+display: flex;
+          align-items: center;
+          justify-content: space-around;
+          flex-direction: column;
+        }
+        & .formulario {
+          display: flex;
+          flex-direction: column;
+          margin: 2rem;
+          // width: 25rem;     
+        }
+        
+          a {
+            // margin: 2rem;
+              
+              color: $letra;
+              justify-content: center;
+              align-items: center;
+              font-weight: 400;
+              font-size: 1rem;
+              text-decoration: none;
+              
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          
+        & input {
+          font-size: 0.8rem;
+          color: $fondo;
+          font-weight: bold;
+          padding-left: 4%;
+          padding-top: 1%;
+          padding-bottom: 1%;
+          border-radius: 1rem;
+          outline: none;
+          background-color: $letra;
+          border: 0;
+          margin-bottom: 1rem;
+          box-shadow: 0px 0px 5px 0px rgba(250, 247, 247, 0.75);
+        }
+        & label {
+          font-size: 1rem;
+          color: $letra;
+          padding-left: 4%;
+        }
+        & textarea {
+          font-size: 0.8rem;
+          color: $fondo;
+          padding-left: 4%;
+          padding-top: 2%;
+          border-radius: 0.5rem;
+          outline: none;
+          background-color: $letra;
+          border: 0;
+          font-weight: bold;
+          box-shadow: 0px 0px 5px 0px rgba(250, 247, 247, 0.75);
+        }
+        
+        & .botonForm {
+          margin: 1rem;
+          width: 10rem;
+          height: 2rem;
+          // border: 1px solid $fondo;
+          opacity: 1;
+          background-color: $letra;
+          color: $fondo;
+          transition: all 1s;
+          border-radius: 2rem;
+          align-self: center;
+          padding: 0;
+          font-size: .8rem;
+          font-weight: bold;
+          box-shadow: 0px 0px 5px 0px rgba(250, 247, 247, 0.75);
+          &:hover {
+            opacity: 0.7;
+            font-size: .85rem;
+          }
+        }
+      }
+      .custom-icon-class{
+        
+        border: none!important;
+      }
+      .btnSweet{
+        background-color: $detalle!important;
+        border: none!important;
+      }
