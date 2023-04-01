@@ -34,7 +34,7 @@ export const ItemList = ({ items }) => {
          {
          
             items.map(item =>
-               <div key={item.id} className='imgCar'>
+               <div key={item.id} className='xzy'>
                <Item
                
                   id={item.id}

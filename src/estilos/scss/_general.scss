@@ -98,32 +98,6 @@ $detalle2: rgba(85, 107, 47, 0.2);
   }
 }
 
-// .file-select {
-//   position: relative;
-//   display: inline-block;
-// }
-
-// .file-select::before {
-//   background-color: $detalle;
-//   color: white;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   border-radius: 3px;
-//   content: 'Seleccionar foto'; /* testo por defecto */
-//   position: absolute;
-//   left: 0;
-//   right: 0;
-//   top: 0;
-//   bottom: 0;
-// }
-
-// .file-select input[type="file"] {
-//   opacity: 0;
-//   width: auto;
-//   height: auto;
-//   display: inline-block;
-// }
 .cajaUpload{
   display: flex;
   justify-content: center;
@@ -168,20 +142,4 @@ $detalle2: rgba(85, 107, 47, 0.2);
 .noStock{
   background-color: rgba(255, 0, 0, .2);
 }
-.imgMedida {
-  position: relative;
-  display: inline-block;
-}
 
-.medida {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, 0);
-  // padding: 10px;
-  color: white;
-  // width: 8.5rem;
-  font-size: .7rem;
-  padding-right: .3rem;
-  padding-top: .3rem;
-}

@@ -12,15 +12,15 @@ const ItemListContainer = (props) => {
 
     return (
         <>
-            <div id="calendario" >
-                <div className='item row'>
+            <section id="calendario" >
+                <div className='item'>
                     <ItemList items={items} />
                 </div>
                 <Link to="#trayectoria" className="flecha" onClick={() => props.handleScrollTo("#trayectoria")}>
           < i className="bi bi-caret-down"></i>
                 </Link> 
                 <div className='btnCalendario'>PROXIMOS CONCIERTOS  <i className="bi bi-calendar-check"></i></div>
-            </div>
+            </section>
         </>
     );
 };

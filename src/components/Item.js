@@ -15,7 +15,7 @@ export const Item = (
   const tituloId = titulo.replace(/_|#| |@|<>/g, "_");
 
   return (
-    <div className="m-0 p-0" key={id}>
+    <div className="" key={id}>
       <Link to={`/detalle/${id}#${tituloId}`} className=''>
 
 
