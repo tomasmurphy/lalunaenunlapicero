@@ -21,11 +21,8 @@ const Trayectoria = (props) => {
 <p>La propuesta musical de estas jóvenes músicas uruguayas se basa en un dinámico e intenso diálogo expresivo e interpretativo entre versiones y composiciones propias, que ha dialogado en distintas oportunidades y proyectos también con la danza y la poesía.
    </p> 
 </div>
-<div className="col-12 col-md-6 p-md-5 p-2 order-md-2">
-<iframe className=" iframe"src="https://www.youtube.com/embed/KWqOTEobki0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
 
-<div className="col-12 redes">
+<div className="col-12 mt-2 mb-3 m-md-auto redes">
 
               <a
                 target="_blank"
@@ -52,6 +49,12 @@ const Trayectoria = (props) => {
                 eri
               </a>
 </div>
+
+<div className="col-12 col-md-6 p-md-5 p-2 order-md-2">
+<iframe className=" iframe"src="https://www.youtube.com/embed/KWqOTEobki0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+
 
 <div className="p-md-5 p-2 col-12 col-md-6 order-md-1">
 <h3>Eventos destacados</h3>

@@ -15,16 +15,16 @@ export const Item = (
   const tituloId = titulo.replace(/_|#| |@|<>/g, "_");
 
   return (
-    <div className="" key={id}>
-      <Link to={`/detalle/${id}#${tituloId}`} className='link'>
+    <div className="m-0 p-0" key={id}>
+      <Link to={`/detalle/${id}#${tituloId}`} className=''>
 
 
 
-        <div className="imgMedida">
-          <img src={imagenes[0].url} alt={`Foto de ${titulo}`} className='img-fluid mx-0 px-0' />
+        {/* <div className=""> */}
+          <img src={imagenes[0].url} alt={`Foto de ${titulo}`} className='img-fluid' />
 
-          <div className="medida">Fecha:{fecha}</div>
-        </div>
+          {/* <div className="">Fecha:{fecha}</div> */}
+        {/* </div> */}
 
       </Link>
     </div>)

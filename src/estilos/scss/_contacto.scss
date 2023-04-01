@@ -1,13 +1,13 @@
 #contacto{
     background-image: url('../../../public/la_libreta_de_las_tapas_negras/2.jpg');
-    height: 100vh;
-    height: 100%;
+    height: calc(100vh - 3rem);
     background-attachment: scroll;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
         @include desktop{
           background-position: 0 0;
+          height: 100vh;
         }
         
         .transparencia {
