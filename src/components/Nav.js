@@ -34,7 +34,7 @@ function Nav(props) {
         <Link to="/#inicio" onClick={() => props.handleScrollTo("#inicio")} className={window.location.hash === "#inicio" ? "active" : ""}>
           {windowWidth > 768 ? "INICIO" : <i className="bi bi-moon"></i>}
         </Link>
-        <Link to="/#proyectos" onClick={() => props.handleScrollTo("#proyectos")} className={window.location.hash === "#disco" ? "active" : ""}>
+        <Link to="/#proyectos" onClick={() => props.handleScrollTo("#proyectos")} className={window.location.hash === "#proyectos" ? "active" : ""}>
           {windowWidth > 768 ? "PROYECTOS" : <i className="bi bi-music-note-beamed"></i>}
         </Link>
         <Link to="/#calendario" onClick={() => props.handleScrollTo("#calendario")} className={window.location.hash === "#calendario" ? "active" : ""}>

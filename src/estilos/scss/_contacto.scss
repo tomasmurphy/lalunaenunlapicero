@@ -7,20 +7,19 @@
     background-size: cover;
         @include desktop{
           background-position: 0 0;
-          height: 100vh;
         }
         
         .transparencia {
           padding-top: 0;
           width: 100vw;
-          height: calc(100vh - 7rem);
+          height: calc(100vh - 3rem);
           background: $detalle4;
           z-index: 8000;
           display: flex;
           @include desktop {
             
             padding-top: 0;
-            height: calc(100vh - 3.5rem);
+            height: calc(100vh - 3rem);
                 }
         }
         .orden{
