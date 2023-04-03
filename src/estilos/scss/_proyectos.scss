@@ -7,7 +7,7 @@ height: 100%;
     border-bottom: 3rem solid $detalle;
       @include desktop{
         flex-direction: row;
-        min-height: calc(100vw / 2.72);
+        min-height: calc(100vw / 2.75);
       }
       .flecha{
         position: absolute;
@@ -34,7 +34,7 @@ height: 100%;
         top: 50%;
         font-weight: bold;
         left: 50%;
-        translate: -50%;
+        transform: translate(-50%);
         background-color: rgba(255, 255, 255, 0.8); /* opcional */
         padding: 10px;
         margin: 0;

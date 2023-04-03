@@ -1,5 +1,5 @@
 #trayectoria {
-  min-height: calc(100vw / .23);
+  // min-height: calc(100vw / 1);
   position: relative;
   display: flex;
   height: 100%;
@@ -27,6 +27,7 @@
   }
   
   .iframe {
+    min-height: calc(100vw / 1.96);
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;

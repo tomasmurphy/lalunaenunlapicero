@@ -10,10 +10,10 @@ const Trayectoria = (props) => {
 <section id="trayectoria">
   <div className="container-fluid">
     <div className="row align-items-center">
-<div className="p-md-5 p-2 col-12 col-md-6 ">
+<div className="p-md-5 p-3 col-12 col-md-6 ">
 <iframe className="iframe" src="https://www.youtube.com/embed/sHghbDoFf7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<div class="col-12 p-md-5 p-2 col-md-6">
+<div class="col-12 p-md-5 p-3 col-md-6">
   <h3>Trayectoria</h3>
   
   <p>El dúo centra su espectáculo en la canción popular hispanoamericana, atravesada por el exquisito toque flamenco en la guitarra de Erika González y el sólido trabajo vocal de Cecilia de los Santos. 
@@ -50,13 +50,13 @@ const Trayectoria = (props) => {
               </a>
 </div>
 
-<div className="col-12 col-md-6 p-md-5 p-2 order-md-2">
+<div className="col-12 col-md-6 p-md-5 p-3 order-md-2">
 <iframe className=" iframe"src="https://www.youtube.com/embed/KWqOTEobki0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 
 
-<div className="p-md-5 p-2 col-12 col-md-6 order-md-1">
+<div className="p-md-5 p-3 col-12 col-md-6 order-md-1">
 <h3>Eventos destacados</h3>
   <ul class="eventos">
     <li>13° Festival de Jazz de Montevideo 2020 - Sala Principal del Teatro Solís</li>
