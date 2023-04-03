@@ -1,18 +1,9 @@
-import React, { useContext } from 'react'
-import { CartContext } from '../context/CartContext';
-import ItemCount from './ItemCount';
+import React from 'react'
 import Carousel from './Carousel';
 import Seo from './Head';
 
-export const ItemDetail = ({ itemDetail, onHandleCartModal }) => {
-  const { addToCart, cantidadSeleccionada } = useContext(CartContext)
+export const ItemDetail = ({ itemDetail }) => {
 
-  const onAdd = (cantidad) => {
-    onHandleCartModal()
-    addToCart(itemDetail);
-    
-  };
-  const cantidadEnCart = cantidadSeleccionada(itemDetail.id);
   const settings = {
     dots: false,
     arrows: true,
@@ -45,9 +36,9 @@ export const ItemDetail = ({ itemDetail, onHandleCartModal }) => {
         image={`${itemDetail.imagenes[0].url}`}
         pathSlug={window.location.href}
       />
-
+<div className='container-fluid contenedor'>
       <div className='row mt-5'>
-        <div className="card col-12 col-md-6 ps-md-5 pe-md-5 mt-md-3" key={itemDetail.id}>
+        <div className="card carousel col-12 col-md-6 ps-md-5 pe-md-5 mt-md-3" key={itemDetail.id}>
 
           <Carousel settings={settings}>
             {itemDetail.imagenes.map(img =>
@@ -58,30 +49,20 @@ export const ItemDetail = ({ itemDetail, onHandleCartModal }) => {
         <div className="card pe-3 ps-3 datos mt-3 col-12 col-md-6">
           <div>
             <h1>{itemDetail.titulo}</h1>
-            <h4 className='gris'>{itemDetail.categoria} / stock:{itemDetail.stock}  </h4>  
-            <div className='' dangerouslySetInnerHTML={{ __html: itemDetail.descripcion }} />
-          
+           
           </div>
           <div className='mt-3 mb-3'>
+            <p>{itemDetail.fecha}</p>
           </div>       
-          <div className='mt-3'>   
-          
-          <h4 ><i className="bi bi-credit-card-2-back me-2"></i>Todos los medios de pago </h4>
-
-            <h4><i className="bi bi-truck me-2"></i>Envíos a todo el país!</h4>
-            <h4><i className="bi bi-person-check me-2"></i>Asesoramiento personalizado</h4>
-            
-          </div>
-          
-            
-          <h4 className='text-center text-md-start mt-3'><ItemCount stock={itemDetail.stock} initial={(cantidadEnCart === undefined) ? 1 : cantidadEnCart} onAdd={onAdd} />
-          </h4>
-          
+          <div className='' dangerouslySetInnerHTML={{ __html: itemDetail.descripcion }} />
+                   
+             
   
 
         </div>
        
 
+      </div>
       </div>
     </>)
 

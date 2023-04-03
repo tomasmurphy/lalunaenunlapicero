@@ -9,7 +9,7 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [items, setItems] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const addToCart = (item) => {
     if (isInCart(item.id)) {
@@ -111,7 +111,6 @@ export const CartProvider = ({ children }) => {
       {isLoading ? (
         <div className="loader-container">
           <div className="loader">
-            <h3 className='text-center mt-5'>Cargando el catálogo</h3>
             <Loader />
           </div>
         </div>

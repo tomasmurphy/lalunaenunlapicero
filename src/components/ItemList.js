@@ -1,6 +1,6 @@
 import React from 'react'
-import { Item } from './Item'
 import Carousel from './Carousel';
+import { Link } from 'react-router-dom';
 
 export const ItemList = ({ items }) => {
    const settings = {
@@ -15,36 +15,41 @@ export const ItemList = ({ items }) => {
       autoplaySpeed: 2000,
       cssEase: "linear",
       responsive: [
-        {
-          breakpoint: 678,
-          settings: {
-            slidesToShow: 1,
-            arrows:false,
-            autoplay: true,
-            autoplaySpeed: 2000,
-          },
-        },
+         {
+            breakpoint: 678,
+            settings: {
+               slidesToShow: 1,
+               arrows: false,
+               autoplay: true,
+               autoplaySpeed: 2000,
+            },
+         },
       ],
-    };
+   };
 
    return (
       <>
-             <Carousel settings={settings}>
- 
-         {
-         
-            items.map(item =>
-               <div key={item.id} className='xzy'>
-               <Item
-               
-                  id={item.id}
-                  imagenes={item.imagenes}
-                  titulo={item.titulo}
-                  fecha={item.fecha}
-                  />
+         <Carousel settings={settings}>
+
+            {
+
+               items.map(item =>
+                  <div className='evento' key={item.id}>
+                     <Link to={`/detalle/${item.id}`}>
+                        <div className="imgMedida">
+                           <img src={item.imagenes[0].url} alt={`Foto de ${item.titulo}`} className='img-fluid' />
+                           <div className="medida boton">
+                              {item.titulo}
+                              <br/>
+                              {item.fecha}
+                           </div>
+                           
+                        </div>
+                     </Link>
+
                   </div>
-            )
-         }
+               )
+            }
          </Carousel>
       </>
    )

@@ -24,16 +24,18 @@ const Create = () => {
     
   };
   const store = async (e) => {
+    const fechaFormateada = new Date(fecha).toLocaleDateString('es-ES');
     e.preventDefault();
     await addDoc(productsCollection, {
       titulo: titulo,
       descripcion: descripcion,
       imagenes: imagenes,
-      fecha:fecha,
+      fecha:fechaFormateada,
     });
     setDescripcion("");
     setTitulo("");
     setImagenes([]);
+    setFecha("")
 
   };
   const [show, setShow] = useState(false);
@@ -44,6 +46,7 @@ const Create = () => {
       setDescripcion(value);
       
     };
+    
   
   
   return (

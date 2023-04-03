@@ -6,8 +6,8 @@ const Loader = () => {
         <div className="contenido">
             <div className="spinner">
             </div>
-            <i className="fs-1 bi bi-sunglasses" />
-        </div>
+            <i className="bi bi-music-note-beamed"></i>        
+            </div>
     );
 };
 

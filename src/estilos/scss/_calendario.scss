@@ -1,12 +1,12 @@
+
 #calendario {
+  min-height: calc(100vw / .82);
   border-bottom: 2.5rem solid $detalle4;
-  border-top: 3rem solid $detalle4;
-
   @include desktop {
-    border: 4rem solid $detalle4;
+    min-height: calc(100vw / 2.77);
   }
-
   position: relative;
+  
   .flecha {
     position: absolute;
     bottom: -2.5rem;
@@ -15,82 +15,95 @@
     text-shadow: 1px 1px 1px $detalle6;
   }
   .btnCalendario {
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: -2rem;
+    width: auto;
+    text-align: center;    
     font-weight: bold;
-    left: 50%;
-    translate: -50%;
     color: $letra;
-    margin: 0;
-    font-size: 1rem;
-    @include desktop{
-      top: -3rem;
-    }
-  }
-  .item {
+    height: 3rem;
     background-color: $detalle4;
-    height: auto;
-    border: none !important;
-    @include desktop{
-      .xzy{
-        padding-left: 1rem;
-        padding-right: 1rem;
-      }
-    }
-    
-
-    img {
-      @include desktop {
-        &:hover {
-          opacity: 1;
-          box-shadow: 4px 4px 8px #888888;
-          transition-duration: 0.4s;
-        }
-      }
-    }
-
-    .imgCar {
-      margin: 0;
-      padding: 0;
-      height: fit-content;
-      border: none;
-
-      @include desktop {
-        padding: 1rem;
-      }
-    }
-    .row {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+      .row {
       --bs-gutter-x: 0rem;
     }
-  }
   .slick-list {
     border: none;
   }
-  .card {
-    border: none;
-    border-radius: none;
-  }
-  .card-img {
-    border: none;
-    border-radius: none;
-  }
+  
   .imgMedida {
     position: relative;
     display: inline-block;
   }
 
   .medida {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0);
-    // padding: 10px;
-    color: white;
-    // width: 8.5rem;
-    font-size: 0.7rem;
-    padding-right: 0.3rem;
-    padding-top: 0.3rem;
+    min-width: 10rem;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        font-weight: bold;
+        left: 50%;
+        translate: -50%;
+        background-color: rgba(255, 255, 255, 0.8); /* opcional */
+        padding: 10px;
+        margin: 0;
+        white-space: nowrap;
+  }
+  .fecha {
+   font-size: .8; 
+   color: $detalle;
+  }
+  .evento{
+   @include desktop{
+    img{
+      padding-left: 1rem;
+      padding-right: 1rem;
+      
+    }}
+  }
+  .carousel{
+    
+    padding-left: 0rem;
+    padding-right: 0rem;
+    background-color: $detalle4;
+    border: none!important;
+    @include desktop{
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+}
+.detalle{
+  background-color: $detalle;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  @include desktop{
+    align-items: center;
+  }
+  .contenedor{
+  max-width: 1000px;
+  }
+  .carousel{
+    padding-left: 0rem;
+    padding-right: 0rem;
+    background-color: $detalle4;
+    border: none!important;
+    @include desktop{
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+  .card{
+    background-color: $detalle;
+    border: none;
+    border-radius: none;
+  }
+  h1{
+    font-size: 1.3rem;
+    font-weight: bold;
   }
 }

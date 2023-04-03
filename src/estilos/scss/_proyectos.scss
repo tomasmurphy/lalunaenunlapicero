@@ -1,11 +1,13 @@
 #proyectos{
-    position: relative;
+  min-height: calc(100vw / .7);
+  position: relative;
 display: flex;
 flex-direction: column;
 height: 100%;
     border-bottom: 3rem solid $detalle;
       @include desktop{
         flex-direction: row;
+        min-height: calc(100vw / 2.72);
       }
       .flecha{
         position: absolute;
@@ -16,7 +18,7 @@ height: 100%;
       }
       .proyecto {
         position: relative;
-        display: inline-block; /* o block, dependiendo del diseño */
+        display: block; /* o block, dependiendo del diseño */
       }
       
       .proyecto img {
@@ -36,6 +38,8 @@ height: 100%;
         background-color: rgba(255, 255, 255, 0.8); /* opcional */
         padding: 10px;
         margin: 0;
+        white-space: nowrap;
+
       } 
     }
     
