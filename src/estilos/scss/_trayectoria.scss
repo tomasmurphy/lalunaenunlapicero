@@ -32,6 +32,9 @@
     height: auto;
     aspect-ratio: 16 / 9;
     border-radius: 2rem;
+    @include desktop{
+      min-height: auto;
+    }
   }
   .redes {
     display: flex;

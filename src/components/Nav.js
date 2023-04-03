@@ -25,7 +25,7 @@ function Nav(props) {
   }, []);
 
   return (
-    <nav className={isScrolled ? "scrollFinal" : "scrollInicial"}>
+<nav className={window.location.pathname !== "/" ? "scrollFinal" : isScrolled ? "scrollFinal" : "scrollInicial"}>
       <h1 className={isScrolled ? "d-none d-md-flex" : "d-none"}>
         La luna en un lapicero
       </h1>
