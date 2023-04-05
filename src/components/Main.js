@@ -1,16 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import ItemListContainer from '../components/ItemListContainer';
 import ItemDetailContent from './ItemDetailContent';
 import Home from './Home'
 import Show from './Show'
-import NavMenu from './NavMenu';
 import Nav from './Nav';
-import BannerPromo from './BannerPromo';
 import { useLocation } from 'react-router-dom';
 import Cart from './Cart';
 import { CartProvider } from '../context/CartContext';
+import {Libreta} from './Libreta'
+import { Vivo } from './Vivo';
 
 const Main = () => {
     const location = useLocation().pathname
@@ -39,6 +38,8 @@ const Main = () => {
                         <Routes >
                             <Route path='/' element={<Home handleScrollTo={handleScrollTo} />} />
                             <Route path='/detalle/:idProducto' element={<ItemDetailContent handleCartModal={handleCartModal} />} />
+                            <Route path='/la_libreta_de_las_tapas_negras' element={<Libreta />} />
+                            <Route path='/vivo' element={<Vivo />} />
                             <Route path='/admin' element={<Show />} />
                         </Routes>
                     </div>

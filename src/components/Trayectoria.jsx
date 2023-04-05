@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Trayectoria = (props) => {
@@ -13,7 +13,7 @@ const Trayectoria = (props) => {
 <div className="p-md-5 p-3 col-12 col-md-6 ">
 <iframe className="iframe" src="https://www.youtube.com/embed/sHghbDoFf7U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<div class="col-12 p-md-5 p-3 col-md-6">
+<div className="col-12 p-md-5 p-3 col-md-6">
   <h3>Trayectoria</h3>
   
   <p>El dúo centra su espectáculo en la canción popular hispanoamericana, atravesada por el exquisito toque flamenco en la guitarra de Erika González y el sólido trabajo vocal de Cecilia de los Santos. 
@@ -30,7 +30,7 @@ const Trayectoria = (props) => {
                 rel="noopener noreferrer"
               > 
               <i className="violeta bi bi-instagram"> </i>
-                ceci
+                @_cecidls
               </a>
               <a
                 target="_blank"
@@ -38,7 +38,7 @@ const Trayectoria = (props) => {
                 rel="noopener noreferrer"
               > 
               <i className="violeta bi bi-instagram"> </i>
-               dúo
+               @lalunaenunlapicero
               </a>
               <a
                 target="_blank"
@@ -46,19 +46,19 @@ const Trayectoria = (props) => {
                 rel="noopener noreferrer"
               > 
               <i className="violeta bi bi-instagram"> </i>
-                eri
+                @erigonzalezv
               </a>
 </div>
 
 <div className="col-12 col-md-6 p-md-5 p-3 order-md-2">
-<iframe className=" iframe"src="https://www.youtube.com/embed/KWqOTEobki0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe className=" iframe"src="https://www.youtube.com/embed/KWqOTEobki0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullscreen></iframe>
 </div>
 
 
 
 <div className="p-md-5 p-3 col-12 col-md-6 order-md-1">
 <h3>Eventos destacados</h3>
-  <ul class="eventos">
+  <ul className="eventos">
     <li>13° Festival de Jazz de Montevideo 2020 - Sala Principal del Teatro Solís</li>
     <li>Ganadoras del programa "Guitarra Negra" 2020 - Sala Zitarrosa</li>
     <li>Festival "Música de la Tierra" 2021 - Planetario de Montevideo</li>

@@ -1,6 +1,5 @@
 import React from 'react'
 import Carousel from './Carousel';
-import Seo from './Head';
 
 export const ItemDetail = ({ itemDetail }) => {
 
@@ -31,11 +30,7 @@ export const ItemDetail = ({ itemDetail }) => {
 
   return (
     <>
-      <Seo title={itemDetail.titulo}
-        description={itemDetail.precio}
-        image={`${itemDetail.imagenes[0].url}`}
-        pathSlug={window.location.href}
-      />
+      
 <div className='container-fluid contenedor'>
       <div className='row mt-5'>
         <div className="card carousel col-12 col-md-6 ps-md-5 pe-md-5 mt-md-3" key={itemDetail.id}>

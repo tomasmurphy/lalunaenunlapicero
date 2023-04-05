@@ -1,5 +1,5 @@
 #contacto{
-    background-image: url('../../../public/la_libreta_de_las_tapas_negras/2.jpg');
+    background-image: url('../../../public/la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras\ \(11\).jpg');
     height: calc(100vh - 3rem);
     background-attachment: scroll;
     background-position: top;
@@ -63,6 +63,7 @@ display: flex;
           border: 0;
           margin-bottom: 1rem;
           box-shadow: 0px 0px 5px 0px rgba(250, 247, 247, 0.75);
+          
         }
         & label {
           font-size: 1rem;
@@ -81,7 +82,9 @@ display: flex;
           font-weight: bold;
           box-shadow: 0px 0px 5px 0px rgba(250, 247, 247, 0.75);
         }
-        
+        ::placeholder{
+          color: grey;
+        }
         & .botonForm {
           margin: 1rem;
           width: 10rem;

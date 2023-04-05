@@ -6,12 +6,10 @@ export const FormContacto = () => {
   const [nombre, setNombre] = useState("");
   const [mensaje, setMensaje] = useState("");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = () => {
     let deviceType = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
       ? "api"
       : "web";
-
-    event.preventDefault();
     const whatsapp = `Hola *La luna en un lapicero* 🌕. Soy ${nombre} y mi mensaje es: ${mensaje}`;
     let linkCompra = `https://${deviceType}.whatsapp.com/send?phone=59897453324&text=${whatsapp}`;
     window.open(linkCompra, "_blank");

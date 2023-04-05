@@ -1,16 +1,17 @@
 import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from "react";
 
-
 function Nav(props) {
   const windowWidth = window.innerWidth;
 
-
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const pantalla = windowWidth > 768 ? 0.45 : 0.17;
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollDistance = window.pageYOffset;
-      if (scrollDistance > window.innerHeight * 0.45) {
+      if (scrollDistance > window.innerHeight * pantalla) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -22,12 +23,15 @@ function Nav(props) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [pantalla]);
+  const cualPath = window.location.pathname === "/la_libreta_de_las_tapas_negras"? "scrollNegro": "scrollFinal";
+
 
   return (
-<nav className={window.location.pathname !== "/" ? "scrollFinal" : isScrolled ? "scrollFinal" : "scrollInicial"}>
-      <h1 className={isScrolled ? "d-none d-md-flex" : "d-none"}>
-        La luna en un lapicero
+    <nav className={window.location.pathname !== "/" ? cualPath : isScrolled ? "scrollFinal" : "scrollInicial"}
+    >
+      <h1 className={isScrolled ? "d-none d-lg-flex" : "d-none"}>
+        Ceci de los Santos y Erika Gonzalez
       </h1>
       <div className='navbarContainer'>
 

@@ -111,7 +111,7 @@ const Show = () => {
       {loggedIn ? (
         <></>
       ) : (
-        <div className="container-fluid " style={{ backgroundColor: 'black' }}>
+        <div className="container-fluid admin" style={{ backgroundColor: 'black' }}>
           <div className="row">
             <div className="col">
               <div className="d-flex flex-column gap-1 justify-content-end flex-md-row text-center mb-2">

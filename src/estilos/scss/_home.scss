@@ -9,18 +9,20 @@
   height: calc(100vh - 3rem);
   
   .eri{
+    text-transform: uppercase;
     position: absolute;
     top: 25vh;
     left: 1rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-shadow: 1px 1px 1px $detalle6;
     // font-family: "Indie Flower";
   }
   .ceci{
+    text-transform: uppercase;
     position: absolute;
     top: 35vh;
     right: 1rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-shadow: 1px 1px 1px $detalle6;
     // font-family: "Indie Flower";
   }
@@ -31,7 +33,7 @@
       position: absolute;
       top: 50vh;
       left: 4rem;
-      font-size: 1.3rem;
+      font-size: 1rem;
       text-shadow: 1px 1px 1px $detalle6;
       // font-family: "Indie Flower";
     }
@@ -39,7 +41,7 @@
       position: absolute;
       top: 50vh;
       right: 4rem;
-      font-size: 1.3rem;
+      font-size: 1rem;
       text-shadow: 1px 1px 1px $detalle6;
       // font-family: "Indie Flower";
     }
