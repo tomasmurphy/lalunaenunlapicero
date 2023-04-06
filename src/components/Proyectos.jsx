@@ -11,7 +11,7 @@ const Proyectos = (props) => {
             alt=""
             className="img-fluid col-12 col-md-6"
           />
-          <Link to="/vivo" className="boton">
+          <Link to="/vivo" className="boton" >
             VIVO
           </Link>
         </div>
@@ -21,7 +21,8 @@ const Proyectos = (props) => {
             alt=""
             className="img-fluid col-12 col-md-6"
           />
-          <Link to="/la_libreta_de_las_tapas_negras" className="boton">
+          <Link 
+          to="la_libreta_de_las_tapas_negras" className="boton">
             La libreta de las tapas negras
           </Link>
         </div>

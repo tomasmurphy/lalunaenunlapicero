@@ -36,7 +36,7 @@ const Main = () => {
                             <Route path='/' element={<Home handleScrollTo={handleScrollTo} />} />
                             <Route path='/detalle/:idProducto' element={<ItemDetailContent handleCartModal={handleCartModal} />} />
                             <Route path='/la_libreta_de_las_tapas_negras' element={<Libreta />} />
-                            <Route path='/vivo' element={<Vivo />} />
+                            <Route exact path='/vivo' element={<Vivo />} />
                             <Route path='/admin' element={<Show />} />
                         </Routes>
                     </div>

@@ -1,8 +1,18 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Carousel from "./Carousel";
+import Loader from "./Loader"
 
 export const Libreta = () => {
-  window.scrollTo(0, 0)
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+      setIsLoading(false);
+    console.log("me cargue")     
+    },2000);
+  }, []);
+
   const settings = {
     dots: false,
     arrows: false,
@@ -29,7 +39,9 @@ export const Libreta = () => {
 
   return (
     <>
-      <div id="libreta" className="container-fluid">
+    {isLoading ? <Loader />
+    :""}
+     <div id="libreta" className={`${isLoading ? "d-none" : "container-fluid"}`}>
         <div className="row libreta">
           <div className="carousel col-12 col-md-6">
             <Carousel settings={settings}>

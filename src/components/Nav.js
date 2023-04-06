@@ -24,17 +24,20 @@ function Nav(props) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [pantalla]);
-  const cualPath = window.location.pathname === "/la_libreta_de_las_tapas_negras"? "scrollNegro": "scrollFinal";
+  const cualPath = window.location.pathname === "/la_libreta_de_las_tapas_negras/" || window.location.pathname === "/la_libreta_de_las_tapas_negras"
+   ? "scrollNegro": "scrollFinal";
 
 
   return (
     <nav className={window.location.pathname !== "/" ? cualPath : isScrolled ? "scrollFinal" : "scrollInicial"}
     >
-      <h1 className={isScrolled ? "d-none d-lg-flex" : "d-none"}>
-        Ceci de los Santos y Erika Gonzalez
-      </h1>
+      
       <div className='navbarContainer'>
-
+      <div className={isScrolled ? "d-none d-lg-flex logo" : "d-none"}>
+        <Link to="/#inicio" onClick={() => props.handleScrollTo("#inicio")}>
+        Ceci de los Santos y Erika Gonzalez
+        </Link>  
+      </div>
         <Link to="/#inicio" onClick={() => props.handleScrollTo("#inicio")} className={window.location.hash === "#inicio" ? "active" : ""}>
           {windowWidth > 768 ? "INICIO" : <i className="bi bi-moon"></i>}
         </Link>

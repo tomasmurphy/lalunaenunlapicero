@@ -1,10 +1,22 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Carousel from "./Carousel";
 import Swal from "sweetalert2";
 import icono from "../img/detalle.png";
+import Loader from './Loader'
 
 export const Vivo = () => {
-  window.scrollTo(0, 0);
+
+  const [isLoading, setIsLoading] = useState(true);
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+      setIsLoading(false);
+    console.log("me cargue")     
+    },2000);
+  }, []);
+  
+  
   const handleCompra = () => {
     let deviceType =
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -79,24 +91,25 @@ export const Vivo = () => {
 
   return (
     <>
-      <div id="vivo" className="container-fluid">
+      {isLoading ? <Loader />:""}
+      <div id="vivo" className={`${isLoading ? "d-none" : "container-fluid"}`}>
         <div className="row vivo">
           <div className="carousel col-12 col-md-12">
             <Carousel settings={settings}>
-              <img src="../../vivo/show (1).jpg" alt="" className="img-fluid" />
+              <img  src="../../vivo/show (1).jpg" alt="" className="img-fluid" />
               <img
                 src="../../vivo/show (10).jpg"
                 alt=""
                 className="img-fluid"
               />
-              <img src="../../vivo/show (6).jpg" alt="" className="img-fluid" />
+              <img src="../../vivo/show (6).jpg" alt="" className="img-fluid"/>
               <img src="../../vivo/show (7).jpg" alt="" className="img-fluid" />
               <img src="../../vivo/show (2).jpg" alt="" className="img-fluid" />
               <img src="../../vivo/show (3).jpg" alt="" className="img-fluid" />
               <img src="../../vivo/show (8).jpg" alt="" className="img-fluid" />
               <img src="../../vivo/show (5).jpg" alt="" className="img-fluid" />
               <img src="../../vivo/show (4).jpg" alt="" className="img-fluid" />
-              <img src="../../vivo/show (9).jpg" alt="" className="img-fluid" />
+              <img src="../../vivo/show (9).jpg" alt="" className="img-fluid load" />
             </Carousel>
           </div>
 
@@ -122,7 +135,7 @@ export const Vivo = () => {
                 src="../../vivo/tapa.jpg"
                 alt="tapa"
                 className="tapa col-8 img-fluid"
-              />
+                />
             </div>
             <div className="textoDisco col-md-6 col-12">
               <h1 className="text-center text-md-start mb-4">Ficha técnica</h1>
@@ -310,6 +323,6 @@ export const Vivo = () => {
           </Carousel>
         </div>
       </div>
-    </>
+</>
   );
 };

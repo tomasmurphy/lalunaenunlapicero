@@ -3,10 +3,12 @@ import Swal from "sweetalert2";
 import icono from '../img/detalle.png'
 
 export const FormContacto = () => {
+  
   const [nombre, setNombre] = useState("");
   const [mensaje, setMensaje] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
     let deviceType = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
       ? "api"
       : "web";

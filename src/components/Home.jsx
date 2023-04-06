@@ -5,10 +5,19 @@ import Contacto from "./Contacto";
 import ItemListContainer from "./ItemListContainer";
 import Trayectoria from "./Trayectoria";
 import ModalesPromo from './ModalesPromo'
+// import Loader from "./Loader";
 
 const Home = (props) => {
-      
+  // const [isLoading, setIsLoading] = useState(true);
+
   
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //   console.log("me cargue")     
+  //   },2000);
+  // }, []);
+
   useLayoutEffect(() => {
     const handleLoad = () => {
       const hash = window.location.hash;
@@ -25,6 +34,8 @@ const Home = (props) => {
   }, []);
 
   return (
+    <>
+    {/* {isLoading ? <Loader />:""} */}
     <>
       <section id="inicio">
         <ModalesPromo nombre={"eri"} />
@@ -47,6 +58,8 @@ const Home = (props) => {
       <Trayectoria handleScrollTo={props.handleScrollTo} />
 
       <Contacto />
+  </>
+  
     </>
   );
 };
