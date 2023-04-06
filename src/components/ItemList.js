@@ -41,7 +41,7 @@ export const ItemList = ({ items }) => {
                            <div className="medida boton">
                               {item.titulo}
                               <br/>
-                              {item.fecha}
+                              {new Date(item.fecha).toISOString().slice(0,10).split('-').reverse().join('-')}
                            </div>
                            
                         </div>

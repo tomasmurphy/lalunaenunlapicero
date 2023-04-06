@@ -3,16 +3,14 @@ import { getDoc, updateDoc, doc } from "firebase/firestore";
 import { dataBase } from "../firebaseConfig";
 import Modal from "react-bootstrap/Modal";
 import ImagenUpload from "./ImageUpload";
-import SelectCategoria from "./SelectCategoria";
+import { Editor } from "./MostrarImagen";
+
 
 const Edit = ({ id  }) => {
-  const [categoria, setCategoria] = useState("");
   const [titulo, setTitulo] = useState("");
-  const [proveedor, setProveedor] = useState("");
-  const [medidas, setMedidas] = useState({ ancho: "", alto: "", patilla: "" });
   const [imagenes, setImagenes] = useState([]);
   const [descripcion, setDescripcion] = useState("");
-  const [stock, setStock] = useState(0);
+  const [fecha, setFecha] = useState(new Date());
 
   const subirImagenes = (img, borrar) => {
     if (borrar === 1) {
@@ -27,35 +25,28 @@ const Edit = ({ id  }) => {
     e.preventDefault();
     const product = doc(dataBase, "items", id);
     const data = {
-      categoria: categoria,
       titulo: titulo,
       descripcion: descripcion,
-      proveedor: proveedor,
-      medidas: medidas,
       imagenes: imagenes,
-      stock: stock,
-      estado: imagenes.length === 0 || stock === 0 ? "pausado" : "activo"
-    };
+      fecha: fecha,
+      };
     await updateDoc(product, data);
     
   };
 
   const getProductById = async (id) => {
     const product = await getDoc(doc(dataBase, "items", id));
-
+    
     if (product.exists()) {
-      setCategoria(product.data().categoria);
       setTitulo(product.data().titulo);
       setDescripcion(product.data().descripcion);
       setImagenes(product.data().imagenes);
-      setProveedor(product.data().proveedor);
-      setMedidas(product.data().medidas);
-      setStock(product.data().stock);
+      setFecha(product.data().fecha);
     } else {
       console.log("El producto no existe");
     }
   };
-
+console.log(fecha)
   useEffect(() => {
     getProductById(id);
     // eslint-disable-next-line
@@ -64,12 +55,8 @@ const Edit = ({ id  }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const cargarCategoria = (categoria) => {
-    setCategoria(categoria);
-  };
-  const handleCategoriaChange = (value) => {
-    setCategoria(value);
-    cargarCategoria(value);
+  const handleDescripcionChange = (value) => {
+    setDescripcion(value);
   };
   return (
     <>
@@ -85,10 +72,10 @@ const Edit = ({ id  }) => {
         centered
       >
         <Modal.Header closeButton>
-          <Modal.Title>Editar producto</Modal.Title>
+          <Modal.Title>Editar evento</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div className="container">
+          <div className="container create">
             <div className="row">
               <div className="col">
                 <div className="mb-3 row cajaUpload">
@@ -118,7 +105,7 @@ const Edit = ({ id  }) => {
                       ></ImagenUpload>
                     )}
                   </div>
-                  {/* <div className="col-4 text-center ">
+                  <div className="col-4 text-center ">
                     {imagenes[2] === undefined ? (
                       <ImagenUpload
                         updateFile={{ name: "", url: "" }}
@@ -130,18 +117,12 @@ const Edit = ({ id  }) => {
                         subirImagenes={subirImagenes}
                       ></ImagenUpload>
                     )}
-                  </div> */}
+                  </div>
                 </div>
                 <form onSubmit={update} className="row">
-                  <div className="mb-3 col-12 d-flex">
-                    <label className="form-label col-4">Categoria</label>
-                    <SelectCategoria
-                      categoria={categoria}
-                      cargarCategoria={handleCategoriaChange}
-                    />
-                  </div>
-                  <div className="mb-3 col-12 d-flex">
-                    <label className="form-label col-4">Titulo</label>
+                  
+                <div className=" mb-3 col-12">
+                    <label className="form-label"><b>Titulo</b></label>
                     <input
                       value={titulo}
                       onChange={(e) => setTitulo(e.target.value)}
@@ -149,88 +130,29 @@ const Edit = ({ id  }) => {
                       className="form-control"
                     />
                   </div>
-                  <div className="mb-3 col-12 d-flex">
-                    <label className="form-label col-4">Descripcion</label>
-                    <input
-                      value={descripcion}
-                      onChange={(e) => setDescripcion(e.target.value)}
-                      type="text"
-                      className="form-control"
-                    />
-                  </div>
-                  <div className="mb-3 col-12 d-flex">
-                    <label className="form-label col-4">Proveedor</label>
-                    <input
-                      value={proveedor}
-                      onChange={(e) => setProveedor(e.target.value)}
-                      type="text"
-                      className="form-control"
-                    />
-                  </div>
-                  <div className="mb-3 col-12 col-md-4 text-center">
-                    <label className="form-label">Stock</label>
-                    <div className="input-group">
-                      <button
-                        className="btn btn-outline-secondary"
-                        type="button"
-                        onClick={() => setStock(stock - 1)}
-                      >
-                        -
-                      </button>
-                      <input
-                        value={stock}
-                        onChange={(e) => setStock(e.target.value)}
-                        type="number"
-                        className="form-control text-center"
-                      />
-                      <button
-                        className="btn btn-outline-secondary"
-                        type="button"
-                        onClick={() => setStock(stock + 1)}
-                      >
-                        +
-                      </button>
-                    </div>
-                  </div>
-                  <div className="col-0 col-md-2"></div>
-                  <div className="mb-3 col-4 col-md-2 text-center">
-                    <label className="form-label">Ancho</label>
-                    <input
-                      value={medidas.ancho}
-                      onChange={(e) =>
-                        setMedidas({ ...medidas, ancho: e.target.value })
-                      }
-                      type="number"
-                      className="form-control text-center"
-                    />
-                  </div>
-                  <div className="mb-3 col-4 col-md-2 text-center">
-                    <label className="form-label">Alto</label>
-                    <input
-                      value={medidas.alto}
-                      onChange={(e) =>
-                        setMedidas({ ...medidas, alto: e.target.value })
-                      }
-                      type="number"
-                      className="form-control text-center"
-                    />
-                  </div>
-                  <div className="mb-3 col-4 col-md-2 text-center">
-                    <label className="form-label">Patilla</label>
-                    <input
-                      value={medidas.patilla}
-                      onChange={(e) =>
-                        setMedidas({ ...medidas, patilla: e.target.value })
-                      }
-                      type="number"
-                      className="form-control text-center"
-                    />
+
+                  <div className="mb-3 col-12">
+                  <label className="form-label"><b>Descripcion</b></label>
+                    
+                    <Editor
+                      descripcion={descripcion}
+                      cargarDescripcion={handleDescripcionChange}
+                    ></Editor>
                   </div>
 
+                  <div className=" mb-3 col-12">
+                    <label className="form-label"><b>Fecha</b></label>
+                    <input
+                      value={fecha}
+                      onChange={(e) => setFecha(e.target.value)}
+                      type="date"
+                      className="form-control"
+                    />
+                  </div>
                   <button
                     type="submit"
                     onClick={handleClose}
-                    className="btn btn-primary"
+                    className="btn btnCreate"
                   >
                     Actualizar
                   </button>

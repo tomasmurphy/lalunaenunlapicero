@@ -43,7 +43,7 @@ export const FormContacto = () => {
           <input
             type="text"
             required
-            placeholder="..."
+            placeholder="tu nombre"
             name="nombre"
             value={nombre}
             onChange={handleChangeName}

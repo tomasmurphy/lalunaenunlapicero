@@ -3,7 +3,7 @@
   min-height: calc(100vw / .82);
   border-bottom: 2.5rem solid $detalle4;
   @include desktop {
-    min-height: calc(100vw / 2.81);
+    min-height: calc(100vw / 2.82);
   }
   position: relative;
   
@@ -46,10 +46,17 @@
     min-width: 10rem;
     text-align: center;
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     white-space: nowrap;
-  }
+    box-shadow: 2px 2px 6px #0c0c0c;
+    transition-duration: 0.4s;
+    &:hover {
+        opacity: 0.7;
+        box-shadow: 6px 6px 12px #0c0c0c;
+    }
+}
+
   
   .fecha {
    font-size: .8; 
@@ -106,4 +113,17 @@
     font-size: 1.3rem;
     font-weight: bold;
   }
+  
 }
+.instagram{
+  *{color: $letra!important;
+    font-family: "Cutive Mono"!important;
+  letter-spacing: 1px!important;
+  font-size: 1rem!important;
+
+    }  
+    p{
+      margin-bottom: 0rem!important;
+    }
+  }
+    

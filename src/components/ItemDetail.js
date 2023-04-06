@@ -31,25 +31,27 @@ export const ItemDetail = ({ itemDetail }) => {
   return (
     <>
       
-<div className='container-fluid contenedor'>
+<div className='container-fluid '>
       <div className='row mt-5'>
-        <div className="card carousel col-12 col-md-6 ps-md-5 pe-md-5 mt-md-3" key={itemDetail.id}>
-
-          <Carousel settings={settings}>
+        <div className="card carousel col-12 col-md-4 ps-md-5 pe-md-5 mt-md-3" key={itemDetail.id}>
+         
+       <div className='order-md-3'>  
+       <Carousel settings={settings}>
             {itemDetail.imagenes.map(img =>
               <div key={itemDetail.id}><img src={img.url} alt={itemDetail.titulo} className="img-fluid" /></div>
             )}
           </Carousel>
-        </div>
-        <div className="card pe-3 ps-3 datos mt-3 col-12 col-md-6">
-          <div>
-            <h1>{itemDetail.titulo}</h1>
+       </div>
+       <div>
+            <h1 className='mt-1 text-center order-md-1'>{itemDetail.titulo}</h1>
            
           </div>
-          <div className='mt-3 mb-3'>
-            <p>{itemDetail.fecha}</p>
-          </div>       
-          <div className='' dangerouslySetInnerHTML={{ __html: itemDetail.descripcion }} />
+          <div className='mt-2 mb-2 text-center order-md-2'>
+            <p>{new Date(itemDetail.fecha).toISOString().slice(0,10).split('-').reverse().join('-')}</p>
+          </div>     
+        </div>
+        <div className="card pe-3 ps-3 datos mt-3 col-12 col-md-8">
+          <div className='instagram' dangerouslySetInnerHTML={{ __html: itemDetail.descripcion }} />
                    
              
   

@@ -11,7 +11,7 @@ function ImageUpload({ subirImagenes, updateFile, size = 900 }) {
   const [fileName, setFileName] = useState(updateFile ? updateFile.name : "");
   const [url, setUrl] = useState(updateFile ? updateFile.url : "");
   const [isLoading, setIsLoading] = useState(false);
-  
+    // eslint-disable-next-line  
   const handleFile = useCallback((event) => handleUpload(event.target.files[0]), [subirImagenes, fileName]);
 
   const handleUpload = async (file) => {
@@ -95,7 +95,7 @@ function ImageUpload({ subirImagenes, updateFile, size = 900 }) {
             className="custom-file-upload fs-1 btn"
             onClick={() => fileInputRef.current.click()}
           >
-            {isLoading ? <div className="fs-6">cargando...</div> : <i className="bi bi-sunglasses"></i>}
+            {isLoading ? <div className="fs-6">cargando...</div> : <i className="bi bi-camera"></i>}
             <input
               className="d-none"
               ref={fileInputRef}

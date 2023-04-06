@@ -15,7 +15,12 @@
     left: 1rem;
     font-size: 1rem;
     text-shadow: 1px 1px 1px $detalle6;
-    // font-family: "Indie Flower";
+    cursor: pointer;
+    &:hover{
+      opacity: .7;
+      color: white;
+      text-shadow: 4px 4px 8px #888888; 
+    }
   }
   .ceci{
     text-transform: uppercase;
@@ -24,7 +29,12 @@
     right: 1rem;
     font-size: 1rem;
     text-shadow: 1px 1px 1px $detalle6;
-    // font-family: "Indie Flower";
+    cursor: pointer;
+    &:hover{
+      opacity: .7;
+      color: white;
+      text-shadow: 4px 4px 8px #888888; 
+    }
   }
   @include desktop {
     background-position: 50% 80%;

@@ -6,7 +6,6 @@ import Home from './Home'
 import Show from './Show'
 import Nav from './Nav';
 import { useLocation } from 'react-router-dom';
-import Cart from './Cart';
 import { CartProvider } from '../context/CartContext';
 import {Libreta} from './Libreta'
 import { Vivo } from './Vivo';
@@ -32,8 +31,6 @@ const Main = () => {
             {(location !== "/admin") ?
                 <>  <CartProvider>
                     <Nav handleScrollTo={handleScrollTo} />
-                    {/* <NavMenu></NavMenu> */}
-                    <Cart show={showCart} handleModal={handleCartModal}></Cart>
                     <div className="container-fluid sinBorde">
                         <Routes >
                             <Route path='/' element={<Home handleScrollTo={handleScrollTo} />} />
@@ -43,7 +40,6 @@ const Main = () => {
                             <Route path='/admin' element={<Show />} />
                         </Routes>
                     </div>
-                    {/* <BannerPromo handleCartModal={handleCartModal} /> */}
                     </CartProvider>
                 </>
                 : <div className="container-fluid sinBorde">

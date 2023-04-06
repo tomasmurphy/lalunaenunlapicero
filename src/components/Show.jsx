@@ -5,7 +5,6 @@ import {
   deleteDoc,
   doc,
   getDoc,
-  where,
   query,
 } from "firebase/firestore";
 import { dataBase } from "../firebaseConfig";
@@ -15,23 +14,13 @@ import Create from "./Create";
 import { storage } from "../firebaseConfig";
 import { ref, deleteObject } from "firebase/storage";
 import Login from "./Login";
-import Categorias from "./Categorias";
-import Inicio from "./Inicio";
-import Test from "./ExportExcel";
 
 const Show = () => {
   const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
   const [loggedIn, setLoggedIn] = useState(true);
 
-  const activeProductsCollection = query(
-    collection(dataBase, "items"),
-  );
+  const activeProductsCollection = query(collection(dataBase, "items"));
 
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
 
   useEffect(() => {
     const unsubscribe = onSnapshot(activeProductsCollection, (snapshot) => {
@@ -42,7 +31,7 @@ const Show = () => {
           id: doc.id,
         };
       });
-  
+
       setProducts(productos);
     });
 
@@ -50,16 +39,6 @@ const Show = () => {
     // eslint-disable-next-line
   }, []);
 
-  useEffect(() => {
-    const productosFiltrados = products.filter((producto) => {
-      const titulo = producto.titulo.toLowerCase();
-      const searchTermLower = searchTerm.toLowerCase();
-      return (
-        titulo.includes(searchTermLower)
-      );
-    });
-    setFilteredProducts(productosFiltrados);
-  }, [products, searchTerm]);
 
   const deleteProduct = async (id) => {
     const productDoc = doc(dataBase, "items", id);
@@ -72,7 +51,7 @@ const Show = () => {
 
   const confirmDelete = (id) => {
     Swal.fire({
-      title: "¿Eliminar el producto?",
+      title: "¿Eliminar el evento?",
       text: "Esta accion no es reversible",
       icon: "warning",
       showCancelButton: true,
@@ -83,7 +62,7 @@ const Show = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         deleteProduct(id);
-        Swal.fire("Borrado!", "Chau tu producto", "success");
+        Swal.fire("Borrado!", "Chau tu evento", "success");
       }
     });
   };
@@ -99,11 +78,9 @@ const Show = () => {
       });
   };
 
-  
   const handleLoginSuccess = (isLogin) => {
     setLoggedIn(isLogin);
   };
-  
 
   return (
     <>
@@ -111,64 +88,33 @@ const Show = () => {
       {loggedIn ? (
         <></>
       ) : (
-        <div className="container-fluid admin" style={{ backgroundColor: 'black' }}>
+        <div className="container-fluid" id="admin">
           <div className="row">
             <div className="col">
-              <div className="d-flex flex-column gap-1 justify-content-end flex-md-row text-center mb-2">
+              <div className="d-flex flex-column gap-1 justify-content-start flex-md-row text-center mb-2">
                 <Create></Create>
               </div>
-              <div className="row gap-1 mb-2">
-                <input
-                  className="col-5 col-md-9  ps-2"
-                  type="text"
-                  placeholder="Buscar productos"
-                  value={searchTerm}
-                  onChange={handleSearchChange}
-                />
-              </div>
-              <div className="row cuadro "  style={{ fontWeight: "bold" }} key="titles">
-                <div className="d-none d-md-flex col-md-2 mx-0 px0">
-                  Categoría
-                </div>
-                <div className="col-6 col-md-2 mx-0 px0">Título</div>
-                <div className="d-none d-md-flex col-md-2 mx-0 px0">
-                  Proveedor
-                </div>
-                <div className="d-none d-md-flex col-md-3 mx-0 px0">
-                  Descripción
-                </div>
-                <div className="col-3 col-md-1 mx-0 px0">Stock</div>
-                <div className="col-3 col-md-2 mx-0 px0">Editar/Borrar</div>
-              </div>
-              {filteredProducts.map((product) => (
-                <div
-              style={{ backgroundColor: 'black' } }
 
-                  className={`row cuadro ${
-                    product.stock === 0 ? "noStock" : ""
-                  } ${product.imagenes.length === 0 ? "noStock" : ""}`}
-                  key={product.id}
-                >
-                  <div className="d-none d-md-flex col-md-2 mx-0 px0">
-                    {product.categoria}
-                  </div>
-                  <div className="col-6 col-md-2 mx-0 px0">
+              <div className="row cuadro " key="titles">
+                <div className="col-6 mx-0 px0">Título</div>
+                <div className="col-3 mx-0 px0">Fecha</div>{" "}
+                <div className="col-3  mx-0 px0">Editar/Borrar</div>
+              </div>
+              {products.map((product) => (
+                <div className="row cuadro">
+                  <div className="col-6 mx-0 px0">
                     {product.titulo}
                   </div>
-                  <div className="d-none d-md-flex col-2  mx-0 px0">
-                    {product.proveedor}
+                  
+                  
+                  <div className="col-3  mx-0 px0">
+                    {new Date(product.fecha).toISOString().slice(0,10).split('-').reverse().join('-')}
                   </div>
                   <div
-                    className="d-none d-md-flex col-3 descripcion"
-                    dangerouslySetInnerHTML={{ __html: product.descripcion }}
-                  />
-
-                  <div className="col-3 col-md-1  mx-0 px0">
-                    {product.stock}
-                  </div>
-                  <div  style={{ backgroundColor: 'black' } }
- className="d-flex col-3 col-md-2 mx-0 px0">
-                    {/* <Edit id={product.id}></Edit> */}
+                    
+                    className="d-flex col-3  mx-0 px0"
+                  >
+                    <Edit id={product.id}></Edit>
                     <div>
                       <i
                         onClick={() => {

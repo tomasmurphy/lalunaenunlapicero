@@ -1,6 +1,6 @@
 {
-  "name": "mobilem",
-  "version": "0.1.0",
+  "name": "lalunaenunlapicero",
+  "version": "1.7.0",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
@@ -30,7 +30,7 @@
     "sweetalert2": "^11.7.0",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://mobilem.com.ar/",
+  "homepage": "https://lalunaenunlapicero.com.uy/",
   "scripts": {
     "deploy": "vercel",
     "start": "react-scripts start",
