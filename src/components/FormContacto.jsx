@@ -19,7 +19,7 @@ export const FormContacto = () => {
       text: 'Gracias por contactarnos!',
       iconHtml: `<img src="${icono}" alt="Icono personalizado" width="100"/>`,
       showConfirmButton: true,
-      confirmButtonText: 'Aceptar',
+      confirmButtonText: 'Ta!',
       customClass: {
         icon: 'custom-icon-class',
       },

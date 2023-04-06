@@ -22,7 +22,7 @@ export const Vivo = () => {
       text: "Gracias por tu compra!",
       iconHtml: `<img src="${icono}" alt="Icono personalizado" width="100"/>`,
       showConfirmButton: true,
-      confirmButtonText: "Aceptar",
+      confirmButtonText: "Ta!",
       customClass: {
         icon: "custom-icon-class",
       },
