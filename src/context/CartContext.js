@@ -2,12 +2,23 @@ import React, { createContext, useState, useEffect } from "react";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 import { dataBase } from "../firebaseConfig";
 import Loader from "../components/Loader";
+import { getItems } from "../components/apiCrudRealTime";
 
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [youTube, setYouTube] = useState([]);
+  
+    useEffect(() => {
+      getItems().then((categorias) => {
+        const filtro = categorias.filter(item => item.hasOwnProperty("categoria"));
+        setYouTube(filtro);
+      }).catch((error) => {
+        console.log(error);
+      });
+    }, []);
 
   
   useEffect(() => {
@@ -33,7 +44,8 @@ export const CartProvider = ({ children }) => {
   return (
     <CartContext.Provider
       value={{
-        items
+        items,
+        youTube
       }}
     >
       {isLoading ? (

@@ -19,7 +19,7 @@ export const ItemDetail = ({ itemDetail }) => {
         breakpoint: 678,
         settings: {
           slidesToShow: 1,
-          arrows:false,
+          arrows: false,
           autoplay: true,
           autoplaySpeed: 2000,
         },
@@ -30,36 +30,40 @@ export const ItemDetail = ({ itemDetail }) => {
 
   return (
     <>
-      
-<div className='container-fluid '>
-      <div className='row mt-5'>
-        <div className="card carousel col-12 col-md-4 ps-md-5 pe-md-5 mt-md-3" key={itemDetail.id}>
-         
-       <div className='order-md-3'>  
-       <Carousel settings={settings}>
-            {itemDetail.imagenes.map(img =>
-              <div key={itemDetail.id}><img src={img.url} alt={itemDetail.titulo} className="img-fluid" /></div>
-            )}
-          </Carousel>
-       </div>
-       <div>
-            <h1 className='mt-1 text-center order-md-1'>{itemDetail.titulo}</h1>
-           
+
+      <div className='container-fluid '>
+        <div className='row mt-5'>
+
+          <div className="order-md-4 card carousel col-12 col-md-4 ps-md-5 pe-md-5 mt-4" key={itemDetail.id}>
+
+            <Carousel settings={settings}>
+              {itemDetail.imagenes.map(img =>
+                <div key={itemDetail.id}><img src={img.url} alt={itemDetail.titulo} className="img-fluid" /></div>
+              )}
+            </Carousel>
           </div>
-          <div className='mt-2 mb-2 text-center order-md-2'>
-            <p>{new Date(itemDetail.fecha).toISOString().slice(0,10).split('-').reverse().join('-')}</p>
-          </div>     
-        </div>
-        <div className="card pe-3 ps-3 datos mt-3 col-12 col-md-8">
-          <div className='instagram' dangerouslySetInnerHTML={{ __html: itemDetail.descripcion }} />
-                   
-             
-  
+
+          <div className="col-md-8 col-12  text-center text-md-start order-md-2 ">
+              <h1 className='mt-1'>{itemDetail.titulo}</h1>
+
+            </div>
+            <div className='col-md-4 col-12 order-md-1  text-center'>
+              <p>{new Date(itemDetail.fecha).toISOString().slice(0, 10).split('-').reverse().join('-')}</p>
+            </div>
+
+<hr className='order-md-3'/>
+
+          
+          <div className="order-md-5 card pe-3 ps-3 datos mt-4  col-12 col-md-8">
+            <div className='instagram' dangerouslySetInnerHTML={{ __html: itemDetail.descripcion }} />
+
+
+
+
+          </div>
+
 
         </div>
-       
-
-      </div>
       </div>
     </>)
 

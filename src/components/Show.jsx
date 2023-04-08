@@ -14,6 +14,7 @@ import Create from "./Create";
 import { storage } from "../firebaseConfig";
 import { ref, deleteObject } from "firebase/storage";
 import Login from "./Login";
+import Categorias from './Categorias'
 
 const Show = () => {
   const [products, setProducts] = useState([]);
@@ -93,12 +94,13 @@ const Show = () => {
             <div className="col">
               <div className="d-flex flex-column gap-1 justify-content-start flex-md-row text-center mb-2">
                 <Create></Create>
+                <Categorias></Categorias>
               </div>
 
               <div className="row cuadro " key="titles">
                 <div className="col-6 mx-0 px0">Título</div>
                 <div className="col-3 mx-0 px0">Fecha</div>{" "}
-                <div className="col-3  mx-0 px0">Editar/Borrar</div>
+                <div className="col-3 d-none d-md-block mx-0 px0">Editar/Borrar</div>
               </div>
               {products.map((product) => (
                 <div className="row cuadro">

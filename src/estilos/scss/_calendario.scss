@@ -45,17 +45,16 @@
     transform: translate(-50%, -50%);
     min-width: 10rem;
     text-align: center;
-    // font-weight: bold;
-    background-color: rgba(0, 0, 0,.9);
-    // padding: 10px;
+    background-color: rgba(51, 49, 49, 0.9);
     white-space: nowrap;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 2px 2px 8px rgba(255, 255, 255, 0.3);
     transition-duration: 0.4s;
     &:hover {
         opacity: 0.7;
-        // box-shadow: 6px 6px 12px #0c0c0c;
+        box-shadow: 6px 6px 12px #0c0c0c, 6px 6px 24px rgba(255, 255, 255, 0.3);
     }
 }
+
 
   
   .fecha {
