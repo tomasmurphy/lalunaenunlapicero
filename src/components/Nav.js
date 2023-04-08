@@ -35,7 +35,7 @@ function Nav(props) {
       <div className='navbarContainer'>
       <div className={isScrolled ? "d-none d-lg-flex logo" : "d-none"}>
         <Link to="/#inicio" onClick={() => props.handleScrollTo("#inicio")}>
-        Ceci de los Santos y Erika Gonzalez
+        Cecilia de los Santos y Erika Gonzalez
         </Link>  
       </div>
         <Link to="/#inicio" onClick={() => props.handleScrollTo("#inicio")} className={window.location.hash === "#inicio" ? "active" : ""}>
