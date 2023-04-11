@@ -7,8 +7,8 @@ import Show from './Show'
 import Nav from './Nav';
 import { useLocation } from 'react-router-dom';
 import { CartProvider } from '../context/CartContext';
-import {Libreta} from './Libreta'
-import { Vivo } from './Vivo';
+import Libreta from './Libreta'
+import  Vivo from './Vivo';
 
 const Main = () => {
     const location = useLocation().pathname
@@ -35,8 +35,8 @@ const Main = () => {
                         <Routes >
                             <Route path='/' element={<Home handleScrollTo={handleScrollTo} />} />
                             <Route path='/detalle/:idProducto' element={<ItemDetailContent handleCartModal={handleCartModal} />} />
-                            <Route path='/la_libreta_de_las_tapas_negras' element={<Libreta />} />
-                            <Route exact path='/vivo' element={<Vivo />} />
+                            <Route path='proyectos/la_libreta_de_las_tapas_negras' element={<Libreta />} />
+                            <Route path='proyectos/vivo' element={<Vivo />} />
                             <Route path='/admin' element={<Show />} />
                         </Routes>
                     </div>

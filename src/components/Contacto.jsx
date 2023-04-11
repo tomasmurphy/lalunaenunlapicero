@@ -13,15 +13,15 @@ const Contacto = () => {
               <FormContacto />
             </div>
             <div className="mb-5 text-center col-12">
-              <a
-                title="instagram"
-                href="https://www.instagram.com/lalunaenunlapicero/"
+            <a
+                title="email"
+                href="mailto:lalunaenunlapicero@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="bi bi-instagram"></i> @lalunaenunlapicero{" "}
+                <i className="bi bi-envelope"></i> lalunaenunlapicero@gmail.com
               </a>
-            </div>
+                          </div>
             </div>
           </div>
       </section>

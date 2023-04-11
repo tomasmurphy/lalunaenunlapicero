@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import icono from "../img/detalle.png";
 import Loader from './Loader'
 
-export const Vivo = () => {
+const Vivo = () => {
 
   const [isLoading, setIsLoading] = useState(true);
   
@@ -96,20 +96,20 @@ export const Vivo = () => {
         <div className="row vivo">
           <div className="carousel col-12 col-md-12">
             <Carousel settings={settings}>
-              <img  src="../../vivo/show (1).jpg" alt="" className="img-fluid" />
+              <img  src="../vivo/show (1).jpg" alt="" className="img-fluid" />
               <img
-                src="../../vivo/show (10).jpg"
+                src="../vivo/show (10).jpg"
                 alt=""
                 className="img-fluid"
               />
-              <img src="../../vivo/show (6).jpg" alt="" className="img-fluid"/>
-              <img src="../../vivo/show (7).jpg" alt="" className="img-fluid" />
-              <img src="../../vivo/show (2).jpg" alt="" className="img-fluid" />
-              <img src="../../vivo/show (3).jpg" alt="" className="img-fluid" />
-              <img src="../../vivo/show (8).jpg" alt="" className="img-fluid" />
-              <img src="../../vivo/show (5).jpg" alt="" className="img-fluid" />
-              <img src="../../vivo/show (4).jpg" alt="" className="img-fluid" />
-              <img src="../../vivo/show (9).jpg" alt="" className="img-fluid load" />
+              <img src="../vivo/show (6).jpg" alt="" className="img-fluid"/>
+              <img src="../vivo/show (7).jpg" alt="" className="img-fluid" />
+              <img src="../vivo/show (2).jpg" alt="" className="img-fluid" />
+              <img src="../vivo/show (3).jpg" alt="" className="img-fluid" />
+              <img src="../vivo/show (8).jpg" alt="" className="img-fluid" />
+              <img src="../vivo/show (5).jpg" alt="" className="img-fluid" />
+              <img src="../vivo/show (4).jpg" alt="" className="img-fluid" />
+              <img src="../vivo/show (9).jpg" alt="" className="img-fluid" />
             </Carousel>
           </div>
 
@@ -132,7 +132,7 @@ export const Vivo = () => {
           <div className="disco col-12 row">
             <div className="col-md-6 col-12  text-center ">
               <img
-                src="../../vivo/tapa.jpg"
+                src="../vivo/tapa.jpg"
                 alt="tapa"
                 className="tapa col-8 img-fluid"
                 />
@@ -168,12 +168,12 @@ export const Vivo = () => {
 
           <div className="col-12 row">
             <img
-              src="../../vivo/disco (8).jpeg"
+              src="../vivo/disco (8).jpeg"
               alt="tapa"
               className="m-0 p-0 col-md-3 col-6 img-fluid"
             />
             <img
-              src="../../vivo/disco (9).jpeg"
+              src="../vivo/disco (9).jpeg"
               alt="tapa"
               className="m-0 p-0 col-md-3 col-6 img-fluid"
             />
@@ -206,44 +206,44 @@ export const Vivo = () => {
           </div>
 
           <img
-            src="../../vivo/disco (3).jpeg"
+            src="../vivo/disco (3).jpeg"
             alt="tapa"
             className="m-0 p-0 col-md-3 col-6 img-fluid"
           />
           <img
-            src="../../vivo/disco (2).jpeg"
+            src="../vivo/disco (2).jpeg"
             alt="tapa"
             className="m-0 p-0 col-md-3 col-6 img-fluid"
           />
           <img
-            src="../../vivo/disco (4).jpeg"
+            src="../vivo/disco (4).jpeg"
             alt="tapa"
             className="m-0 p-0 col-md-3 col-6 img-fluid"
           />
           <img
-            src="../../vivo/disco (1).jpeg"
+            src="../vivo/disco (1).jpeg"
             alt="tapa"
             className="m-0 p-0 col-md-3 col-6 img-fluid"
           />
           <img
-            src="../../vivo/disco (10).jpeg"
-            alt="tapa"
-            className="m-0 p-0 col-md-3 col-6 img-fluid"
-          />
-
-          <img
-            src="../../vivo/disco (7).jpeg"
+            src="../vivo/disco (10).jpeg"
             alt="tapa"
             className="m-0 p-0 col-md-3 col-6 img-fluid"
           />
 
           <img
-            src="../../vivo/disco (11).jpeg"
+            src="../vivo/disco (7).jpeg"
+            alt="tapa"
+            className="m-0 p-0 col-md-3 col-6 img-fluid"
+          />
+
+          <img
+            src="../vivo/disco (11).jpeg"
             alt="tapa"
             className="m-0 p-0 col-md-3 col-6 img-fluid"
           />
           <img
-            src="../../vivo/disco (5).jpeg"
+            src="../vivo/disco (5).jpeg"
             alt="tapa"
             className="m-0 p-0 col-md-3 col-6 img-fluid"
           />
@@ -251,72 +251,72 @@ export const Vivo = () => {
         <div className="carousel fondoGris col-12 col-md-12">
           <Carousel settings={settingsCloro}>
             <img
-              src="../../vivo/t-clorotipias (1).png"
+              src="../vivo/t-clorotipias (1).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (2).png"
+              src="../vivo/t-clorotipias (2).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (3).png"
+              src="../vivo/t-clorotipias (3).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (4).png"
+              src="../vivo/t-clorotipias (4).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (5).png"
+              src="../vivo/t-clorotipias (5).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (6).png"
+              src="../vivo/t-clorotipias (6).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (7).png"
+              src="../vivo/t-clorotipias (7).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (8).png"
+              src="../vivo/t-clorotipias (8).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (9).png"
+              src="../vivo/t-clorotipias (9).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (10).png"
+              src="../vivo/t-clorotipias (10).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (15).png"
+              src="../vivo/t-clorotipias (15).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (12).png"
+              src="../vivo/t-clorotipias (12).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (13).png"
+              src="../vivo/t-clorotipias (13).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
             <img
-              src="../../vivo/t-clorotipias (14).png"
+              src="../vivo/t-clorotipias (14).png"
               alt="tapa"
               className="m-0 p-0  img-fluid"
             />
@@ -326,3 +326,5 @@ export const Vivo = () => {
 </>
   );
 };
+
+export default Vivo

@@ -7,22 +7,21 @@ const Proyectos = (props) => {
       <section id="proyectos">
         <div className="proyecto">
           <img
-            src="../../vivo/show (6).jpg"
+            src="../vivo/show (6).jpg"
             alt=""
             className="img-fluid col-12 col-md-6"
           />
-          <Link to="/vivo" className="boton" >
+          <Link to="proyectos/vivo" className="boton" >
             VIVO
           </Link>
         </div>
         <div className="proyecto">
           <img
-            src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (3).jpg"
+            src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (3).jpg"
             alt=""
             className="img-fluid col-12 col-md-6"
           />
-          <Link 
-          to="la_libreta_de_las_tapas_negras" className="boton">
+          <Link to={"proyectos/la_libreta_de_las_tapas_negras"} className="boton">
             La libreta de las tapas negras
           </Link>
         </div>

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import Carousel from "./Carousel";
 import Loader from "./Loader"
 
-export const Libreta = () => {
+const Libreta = () => {
   const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
@@ -46,57 +46,57 @@ export const Libreta = () => {
           <div className="carousel col-12 col-md-6">
             <Carousel settings={settings}>
               <img
-                src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (4).jpg"
+                src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (4).jpg"
                 alt=""
                 className="img-fluid"
               />
               <img
-                src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (5).jpg"
+                src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (5).jpg"
                 alt=""
                 className="img-fluid"
               />
               <img
-                src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (7).jpg"
+                src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (7).jpg"
                 alt=""
                 className="img-fluid"
               />
               <img
-                src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (8).jpg"
+                src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (8).jpg"
                 alt=""
                 className="img-fluid"
               />
               <img
-                src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (9).jpg"
+                src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (9).jpg"
                 alt=""
                 className="img-fluid"
               />
               <img
-                src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (3).jpg"
+                src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (3).jpg"
                 alt=""
                 className="img-fluid"
               />
               <img
-                src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (2).jpg"
+                src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (2).jpg"
                 alt=""
                 className="img-fluid"
               />
               <img
-                src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (6).jpg"
+                src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (6).jpg"
                 alt=""
                 className="img-fluid"
               />
               <img
-                src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (1).jpg"
+                src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (1).jpg"
                 alt=""
                 className="img-fluid"
               />
               <img
-                src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (10).jpg"
+                src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (10).jpg"
                 alt=""
                 className="img-fluid"
               />
               <img
-                src="../../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (11).jpg"
+                src="../la_libreta_de_las_tapas_negras/la_libreta_de_las_tapas_negras (11).jpg"
                 alt=""
                 className="img-fluid"
               />
@@ -118,6 +118,7 @@ export const Libreta = () => {
               </p>
               
               <a 
+              className="text-center"
               target="_blank"
               rel="noopener noreferrer"
               href="https://mediospublicos.uy/la-libreta-de-las-tapas-negras-en-la-zavala-muniz/
@@ -131,3 +132,5 @@ export const Libreta = () => {
     </>
   );
 };
+
+export default Libreta

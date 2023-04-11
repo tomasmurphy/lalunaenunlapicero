@@ -53,30 +53,24 @@ const ModalesPromo = (props) => {
           </div>
           <div className={props.nombre === "ceci" ? "d-none" : "d-block"}>
             <p>
-              Nace en 1997 en Montevideo (Uruguay), donde comienza a los 9 años
-              de edad su formación en el campo de la música académica. Luego
-              comienza a inclinar sus estudios hacia el género músical Flamenco
-              lo cual la lleva a vivir 2 años en Sevilla, España, estudiando
-              allí, en el Conservatorio de Música "Cristóbal de Morales" y la
-              Academia "Artes Escénicas Rebollar" en la modalidad guitarra
-              flamenca.
+            Nace en 1997 en Montevideo, Uruguay.
             </p>
             <p>
-            Como docente imparte clases particulares de guitarra flamenca y ha
-            dado talleres y masterclasses en Argentina, Uruguay, Colombia y
-            Chile, donde también ha acompañado Tablaos Flamencos como
-            guitarrista.
+            A los 9 años de edad comienza su formación en el campo de la música académica, años después inclina sus estudios hacia el género músical Flamenco lo cual la lleva a vivir 2 años en Sevilla, España, estudiando allí, en el Conservatorio de Música "Cristóbal de Morales" y la Academia "Artes Escénicas Rebollar" en la modalidad guitarra flamenca.
+
             </p>
-         
             <p>
-              Ha formado parte de la compañía flamenca “Brujas” participando en
-              diversos escenarios y festivales en España y el Reino Unido.
+            Docente de guitarra, ha dado talleres y masterclasses en Argentina, Uruguay, Colombia y Chile, donde también ha trabajado como guitarrista en diversos Tablaos Flamencos.
+
             </p>
-            <p> En 2020 presentó su espectáculo de guitarra flamenca en el Teatro
-            Solís en formato cuarteto, en el 13º Festival de Jazz de Montevideo.
-            Y en 2021, a dúo con el guitarrista uruguayo Gonzalo Franco,
-            presentaron “Travesía” en la sala Zavala Muniz.
+            <p>
+            Participa como guitarrista en diversos escenarios y festivales de España y el Reino Unido.
+ 
            </p>
+           <p> Destaca su participación en el 13° Festival de Jazz de Montevideo 2020, presentando en la sala principal del Teatro Solís, su concierto de guitarra flamenca en formato cuarteto. 
+ </p>
+ <p>En el 2021, estrena “Travesía” a dúo con el guitarrista uruguayo Gonzalo Franco en la sala Zavala Muniz.
+</p>
           </div>
 <div className="row">
 <img src="../../vivo/t-clorotipias (1).png" alt="clorotipia" width="100" className="m-0 p-0 col-1 img-fluid" />

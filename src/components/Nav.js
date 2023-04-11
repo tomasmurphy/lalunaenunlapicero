@@ -24,7 +24,7 @@ function Nav(props) {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [pantalla]);
-  const cualPath = window.location.pathname === "/la_libreta_de_las_tapas_negras/" || window.location.pathname === "/la_libreta_de_las_tapas_negras"
+  const cualPath = window.location.pathname === "/proyectos/la_libreta_de_las_tapas_negras/" || window.location.pathname === "/proyectos/la_libreta_de_las_tapas_negras"
    ? "scrollNegro": "scrollFinal";
 
 

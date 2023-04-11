@@ -10,42 +10,38 @@ export const CartProvider = ({ children }) => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [youTube, setYouTube] = useState([]);
-  
-    useEffect(() => {
-      getItems().then((categorias) => {
-        const filtro = categorias.filter(item => item.hasOwnProperty("categoria"));
-        setYouTube(filtro);
-      }).catch((error) => {
-        console.log(error);
-      });
-    }, []);
 
-  
   useEffect(() => {
     const loadProducts = async () => {
       const itemsCollection = collection(dataBase, "items");
-      const queryRef = query(
-        itemsCollection,
-        orderBy("fecha", "asc")
-      );
+      const queryRef = query(itemsCollection, orderBy("fecha", "asc"));
       const querySnapshot = await getDocs(queryRef);
       const productos = querySnapshot.docs.map((doc) => {
-        
         return { id: doc.id, ...doc.data() };
       });
       setItems(productos);
       setIsLoading(false);
     };
-  
+
+    getItems()
+      .then((categorias) => {
+        const filtro = categorias.filter((item) =>
+          item.hasOwnProperty("categoria")
+        );
+        setYouTube(filtro);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
     loadProducts();
   }, []);
-  
 
   return (
     <CartContext.Provider
       value={{
         items,
-        youTube
+        youTube,
       }}
     >
       {isLoading ? (
@@ -60,4 +56,3 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
-

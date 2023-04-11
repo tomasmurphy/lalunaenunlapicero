@@ -12,7 +12,7 @@ export const ItemList = ({ items }) => {
       slidesToScroll: 1,
       initialSlide: 0,
       autoplay: false,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 4000,
       cssEase: "linear",
       responsive: [
          {
@@ -21,7 +21,7 @@ export const ItemList = ({ items }) => {
                slidesToShow: 1,
                arrows: false,
                autoplay: true,
-               autoplaySpeed: 2000,
+               autoplaySpeed: 4000,
             },
          },
       ],

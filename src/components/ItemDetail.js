@@ -54,7 +54,7 @@ export const ItemDetail = ({ itemDetail }) => {
 <hr className='order-md-3'/>
 
           
-          <div className="order-md-5 card pe-3 ps-3 datos mt-4  col-12 col-md-8">
+          <div className="order-md-5 card pe-3 ps-3 datos mt-4 mb-3  col-12 col-md-8">
             <div className='instagram' dangerouslySetInnerHTML={{ __html: itemDetail.descripcion }} />
 
 
